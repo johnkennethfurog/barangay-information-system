@@ -1,0 +1,334 @@
+{
+  "clients": [
+    {
+      "id": 1,
+      "citizenId": 1,
+      "firstName": "Juan",
+      "lastName": "dela Cruz",
+      "dateOfBirth": "01-01-1991",
+      "address": "B25 L55 PH 25, Super Duper Subd.",
+      "area": "Area 25",
+      "avatar": "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+      "blotters": [
+        {
+          "isComplainant": true,
+          "caseNumber": "10-014-20351",
+          "respondent": ["Marky Bato"],
+          "complainant": ["Juan dela Cruz"],
+          "complain": "Maingay na aso, lagi nakatali",
+          "subject": "Public Scandal",
+          "date": "01-01-2021",
+          "status": "pending",
+          "remarks": []
+        },
+        {
+          "isComplainant": true,
+          "caseNumber": "10-014-20351",
+          "respondent": ["Marky Bato"],
+          "complainant": ["Juan dela Cruz"],
+          "complain": "Nangunguha ng malungay, di man lang nagpapaalam",
+          "subject": "Theft",
+          "date": "02-12-2021",
+          "status": "resovled",
+          "remarks": [
+            {
+              "date": "01-05-2021",
+              "description": "Nagkasundo na hindi na nya uulitin at mag tatanim na lang ng sariling malungay nya.",
+              "attachedFile": ""
+            }
+          ]
+        },
+        {
+          "isComplainant": false,
+          "respondent": ["Juan dela Cruz"],
+          "complainant": ["Barangay"],
+          "complain": "Nahuli sa Curfew",
+          "subject": "IATF Violation",
+          "date": "04-15-2021",
+          "status": "resovled"
+        }
+      ],
+      "documents": [
+        {
+          "documentType": "Cedula",
+          "purpose": "Work Requirements",
+          "date": "01-01-2020"
+        },
+        {
+          "documentType": "Cedula",
+          "purpose": "Work Requirements",
+          "date": "06-11-2020"
+        },
+        {
+          "documentType": "Barangay Clearance",
+          "purpose": "Work Requirements",
+          "date": "03-15-2021"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "citizenId": 2,
+      "firstName": "Pedro",
+      "lastName": "Penduko",
+      "dateOfBirth": "03-21-1991",
+      "address": "Santol st., House no. 2512, Bakanteng Lote",
+      "area": "Area 2",
+      "avatar": "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+      "blotters": [
+        {
+          "isComplainant": true,
+          "caseNumber": "10-014-20351",
+          "respondent": ["Marky Bato"],
+          "complainant": ["Juan dela Cruz"],
+          "complain": "Maingay na aso, lagi nakatali",
+          "subject": "Public Scandal",
+          "date": "01-01-2021",
+          "status": "pending",
+          "remarks": []
+        },
+        {
+          "isComplainant": true,
+          "caseNumber": "10-014-20351",
+          "respondent": ["Marky Bato"],
+          "complainant": ["Juan dela Cruz"],
+          "complain": "Nangunguha ng malungay, di man lang nagpapaalam",
+          "subject": "Theft",
+          "date": "02-12-2021",
+          "status": "resovled",
+          "remarks": [
+            {
+              "date": "01-05-2021",
+              "description": "Nagkasundo na hindi na nya uulitin at mag tatanim na lang ng sariling malungay nya.",
+              "attachedFile": ""
+            }
+          ]
+        },
+        {
+          "isComplainant": false,
+          "respondent": ["Juan dela Cruz"],
+          "complainant": ["Barangay"],
+          "complain": "Nahuli sa Curfew",
+          "subject": "IATF Violation",
+          "date": "04-15-2021",
+          "status": "resovled"
+        }
+      ],
+      "documents": [
+        {
+          "documentType": "Cedula",
+          "purpose": "Work Requirements",
+          "date": "01-01-2020"
+        },
+        {
+          "documentType": "Cedula",
+          "purpose": "Work Requirements",
+          "date": "06-11-2020"
+        },
+        {
+          "documentType": "Barangay Clearance",
+          "purpose": "Work Requirements",
+          "date": "03-15-2021"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "citizenId": 3,
+      "firstName": "Martine",
+      "lastName": "Nivera",
+      "dateOfBirth": "05-11-1991",
+      "address": "B2 L54 PH 1, Relyeno st., Itaas Subd.",
+      "area": "Area 2",
+      "avatar": "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+      "blotters": [
+        {
+          "isComplainant": true,
+          "caseNumber": "10-014-20351",
+          "respondent": ["Marky Bato"],
+          "complainant": ["Juan dela Cruz"],
+          "complain": "Maingay na aso, lagi nakatali",
+          "subject": "Public Scandal",
+          "date": "01-01-2021",
+          "status": "pending",
+          "remarks": []
+        },
+        {
+          "isComplainant": true,
+          "caseNumber": "10-014-20351",
+          "respondent": ["Marky Bato"],
+          "complainant": ["Juan dela Cruz"],
+          "complain": "Nangunguha ng malungay, di man lang nagpapaalam",
+          "subject": "Theft",
+          "date": "02-12-2021",
+          "status": "resovled",
+          "remarks": [
+            {
+              "date": "01-05-2021",
+              "description": "Nagkasundo na hindi na nya uulitin at mag tatanim na lang ng sariling malungay nya.",
+              "attachedFile": ""
+            }
+          ]
+        },
+        {
+          "isComplainant": false,
+          "respondent": ["Juan dela Cruz"],
+          "complainant": ["Barangay"],
+          "complain": "Nahuli sa Curfew",
+          "subject": "IATF Violation",
+          "date": "04-15-2021",
+          "status": "resovled"
+        }
+      ],
+      "documents": [
+        {
+          "documentType": "Cedula",
+          "purpose": "Work Requirements",
+          "date": "01-01-2020"
+        },
+        {
+          "documentType": "Cedula",
+          "purpose": "Work Requirements",
+          "date": "06-11-2020"
+        },
+        {
+          "documentType": "Barangay Clearance",
+          "purpose": "Work Requirements",
+          "date": "03-15-2021"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "citizenId": 4,
+      "firstName": "Pops",
+      "lastName": "Fernandez",
+      "dateOfBirth": "10-11-1991",
+      "address": "Housing # 2501, - Looban sa Manitkaan",
+      "area": "Area 9",
+      "avatar": "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+      "blotters": [
+        {
+          "isComplainant": true,
+          "caseNumber": "10-014-20351",
+          "respondent": ["Marky Bato"],
+          "complainant": ["Juan dela Cruz"],
+          "complain": "Maingay na aso, lagi nakatali",
+          "subject": "Public Scandal",
+          "date": "01-01-2021",
+          "status": "pending",
+          "remarks": []
+        },
+        {
+          "isComplainant": true,
+          "caseNumber": "10-014-20351",
+          "respondent": ["Marky Bato"],
+          "complainant": ["Juan dela Cruz"],
+          "complain": "Nangunguha ng malungay, di man lang nagpapaalam",
+          "subject": "Theft",
+          "date": "02-12-2021",
+          "status": "resovled",
+          "remarks": [
+            {
+              "date": "01-05-2021",
+              "description": "Nagkasundo na hindi na nya uulitin at mag tatanim na lang ng sariling malungay nya.",
+              "attachedFile": ""
+            }
+          ]
+        },
+        {
+          "isComplainant": false,
+          "respondent": ["Juan dela Cruz"],
+          "complainant": ["Barangay"],
+          "complain": "Nahuli sa Curfew",
+          "subject": "IATF Violation",
+          "date": "04-15-2021",
+          "status": "resovled"
+        }
+      ],
+      "documents": [
+        {
+          "documentType": "Cedula",
+          "purpose": "Work Requirements",
+          "date": "01-01-2020"
+        },
+        {
+          "documentType": "Cedula",
+          "purpose": "Work Requirements",
+          "date": "06-11-2020"
+        },
+        {
+          "documentType": "Barangay Clearance",
+          "purpose": "Work Requirements",
+          "date": "03-15-2021"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "citizenId": 5,
+      "firstName": "Eugene",
+      "lastName": "dela Heva",
+      "dateOfBirth": "12-01-1991",
+      "address": "Housing # 2211, - Looban sa Manitkaan",
+      "area": "Area 9",
+      "avatar": "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+      "blotters": [
+        {
+          "isComplainant": true,
+          "caseNumber": "10-014-20351",
+          "respondent": ["Marky Bato"],
+          "complainant": ["Juan dela Cruz"],
+          "complain": "Maingay na aso, lagi nakatali",
+          "subject": "Public Scandal",
+          "date": "01-01-2021",
+          "status": "pending",
+          "remarks": []
+        },
+        {
+          "isComplainant": true,
+          "caseNumber": "10-014-20351",
+          "respondent": ["Marky Bato"],
+          "complainant": ["Juan dela Cruz"],
+          "complain": "Nangunguha ng malungay, di man lang nagpapaalam",
+          "subject": "Theft",
+          "date": "02-12-2021",
+          "status": "resovled",
+          "remarks": [
+            {
+              "date": "01-05-2021",
+              "description": "Nagkasundo na hindi na nya uulitin at mag tatanim na lang ng sariling malungay nya.",
+              "attachedFile": ""
+            }
+          ]
+        },
+        {
+          "isComplainant": false,
+          "respondent": ["Juan dela Cruz"],
+          "complainant": ["Barangay"],
+          "complain": "Nahuli sa Curfew",
+          "subject": "IATF Violation",
+          "date": "04-15-2021",
+          "status": "resovled"
+        }
+      ],
+      "documents": [
+        {
+          "documentType": "Cedula",
+          "purpose": "Work Requirements",
+          "date": "01-01-2020"
+        },
+        {
+          "documentType": "Cedula",
+          "purpose": "Work Requirements",
+          "date": "06-11-2020"
+        },
+        {
+          "documentType": "Barangay Clearance",
+          "purpose": "Work Requirements",
+          "date": "03-15-2021"
+        }
+      ]
+    }
+  ]
+}
