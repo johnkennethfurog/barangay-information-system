@@ -39,14 +39,19 @@ const useStyles = makeStyles((theme: Theme) =>
 
 const BlotterItem = (props: BlotterItemProps) => {
   const style = useStyles();
-  const { date } = props.blotter;
+  const {
+    date,
+    caseNumber,
+    complain,
+    complainant,
+    respondent,
+    subject,
+  } = props.blotter;
   return (
     <div className={style.container}>
       <Grid container>
         <Grid item xs={12} sm={12} md={6}>
-          <Typography variant="subtitle2">
-            {props.blotter.complainant.join(",")}
-          </Typography>
+          <Typography variant="subtitle2">{complainant.join(",")}</Typography>
           <Typography variant="caption">Complainant/s</Typography>
           <Typography
             style={{ marginTop: 10, marginBottom: 10, marginLeft: 10 }}
@@ -54,9 +59,7 @@ const BlotterItem = (props: BlotterItemProps) => {
           >
             -- Versus --
           </Typography>
-          <Typography variant="subtitle2">
-            {props.blotter.respondent.join(",")}
-          </Typography>
+          <Typography variant="subtitle2">{respondent.join(",")}</Typography>
           <Typography variant="caption" gutterBottom>
             Respondednt/s
           </Typography>
@@ -66,17 +69,15 @@ const BlotterItem = (props: BlotterItemProps) => {
             {moment(date).format("MMMMM DD,YYYY")}
           </Typography>
           <Typography variant="subtitle2">
-            Barangay Case Number: 10-1101-002
+            Barangay Case Number: {caseNumber}
           </Typography>
-          <Typography variant="subtitle2">
-            For: {props.blotter.subject}
-          </Typography>
+          <Typography variant="subtitle2">For: {subject}</Typography>
         </Grid>
         <Grid item sm={12}>
           <Typography style={{ textAlign: "center" }} variant="subtitle1">
             COMPLAIN
           </Typography>
-          <pre className={style.complain}>{props.blotter.complain}</pre>
+          <pre className={style.complain}>{complain}</pre>
         </Grid>
       </Grid>
     </div>
