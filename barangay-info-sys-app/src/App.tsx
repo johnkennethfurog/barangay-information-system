@@ -21,6 +21,7 @@ import DrawerStyle from "./App.style";
 import CitizenList from "./features/citizens/citizen-list/citizen-list";
 import CitizenProfile from "./features/citizens/citizen-profile/citizen-profile";
 import drawerItems from "./utils/drawer-items";
+import CitizenNew from "./features/citizens/citizen-profile/citizen-new";
 
 function App() {
   const classes = DrawerStyle();
@@ -102,6 +103,9 @@ function App() {
         <Switch>
           <Route exact path="/citizens">
             <CitizenList />
+          </Route>
+          <Route exact path="/citizens/new">
+            <CitizenNew />
           </Route>
           <Route exact path="/citizens/:citizenId">
             <CitizenProfile />

@@ -29,8 +29,8 @@ const CitizenBlotters = () => {
       contentClassName={style.content}
       title="Active Blotter"
     >
-      {blotters?.map((blotter) => {
-        return <BlotterItem blotter={blotter} />;
+      {blotters?.map((blotter, index) => {
+        return <BlotterItem key={index} blotter={blotter} />;
       })}
     </Section>
   );

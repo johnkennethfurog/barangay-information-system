@@ -1,9 +1,11 @@
 import { configureStore, ThunkAction, Action } from "@reduxjs/toolkit";
 import citizenReducer from "../features/citizens/citizenSlice";
+import commonReducer from "./commonSlice";
 
 export const store = configureStore({
   reducer: {
     citizen: citizenReducer,
+    common: commonReducer,
   },
 });
 

@@ -1,12 +1,16 @@
 import { useState } from "react";
-
-const useInput = (initialValue?: string) => {
+import { setDefault } from "../utils/helper";
+const useInput = <T,>(initialValue: T) => {
   const [value, setValue] = useState(() => {
-    return !!initialValue ? initialValue : "";
+    return initialValue || setDefault(initialValue);
   });
 
-  const set = (newValue?: string) => {
-    setValue(newValue || "");
+  const set = (newValue: T) => {
+    if (!newValue) {
+      setValue(setDefault(initialValue));
+      return;
+    }
+    setValue(newValue);
   };
 
   const bind = {

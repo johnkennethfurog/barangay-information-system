@@ -21,7 +21,7 @@ const AppDatePicker = (props: DatePickerProps) => {
       id="date-picker-inline"
       label="Date of Birth"
       value={props.value}
-      style={{ width: 200 }}
+      style={{ width: "100%" }}
       onChange={(date: MaterialUiPickersDate | null, value?: string | null) => {
         const val = !!value ? value : "";
         props.onChange(moment(val));

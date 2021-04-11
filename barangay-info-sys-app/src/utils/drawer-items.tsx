@@ -1,5 +1,4 @@
 import { DrawerItem } from "../models/drawer-item";
-import MailIcon from "@material-ui/icons/Mail";
 import DashboardIcon from "@material-ui/icons/Dashboard";
 import AssignmentIcon from "@material-ui/icons/Assignment";
 import DescriptionIcon from "@material-ui/icons/Description";

@@ -8,13 +8,28 @@ import { BrowserRouter as Router } from "react-router-dom";
 import * as serviceWorker from "./serviceWorker";
 import MomentUtils from "@date-io/moment";
 import { MuiPickersUtilsProvider } from "@material-ui/pickers";
+import { ThemeProvider } from "@material-ui/styles";
+import { createMuiTheme } from "@material-ui/core";
+
+const theme = createMuiTheme({
+  palette: {
+    primary: {
+      main: "#00796b",
+    },
+    secondary: {
+      main: "#26a69a",
+    },
+  },
+});
 
 ReactDOM.render(
   <Provider store={store}>
     <Router>
-      <MuiPickersUtilsProvider utils={MomentUtils}>
-        <App />
-      </MuiPickersUtilsProvider>
+      <ThemeProvider theme={theme}>
+        <MuiPickersUtilsProvider utils={MomentUtils}>
+          <App />
+        </MuiPickersUtilsProvider>
+      </ThemeProvider>
     </Router>
   </Provider>,
   document.getElementById("root")

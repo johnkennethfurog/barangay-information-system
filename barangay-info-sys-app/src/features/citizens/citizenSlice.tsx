@@ -1,8 +1,9 @@
-import { createSlice, PayloadAction } from "@reduxjs/toolkit";
+import { createSlice, Dictionary, PayloadAction } from "@reduxjs/toolkit";
 import { AxiosResponse } from "axios";
 import { AppThunk, RootState } from "../../app/store";
 import { Citizen } from "../../models/citizen";
 import { CitizenDetail } from "../../models/citizen-detail";
+import { LookupItem } from "../../models/lookup-item";
 import { clientApiRequest } from "../../utils/client";
 
 interface CitizenState {
@@ -10,12 +11,14 @@ interface CitizenState {
   citizenDetail?: CitizenDetail;
   isLoading: boolean;
   error: any;
+  lookups: Dictionary<LookupItem>;
 }
 
 const initialState: CitizenState = {
   citizens: [],
   error: null,
   isLoading: false,
+  lookups: {},
 };
 
 // REDUCERS
@@ -23,6 +26,12 @@ const citizenSlice = createSlice({
   name: "citizens",
   initialState,
   reducers: {
+    resetForm: (state) => {
+      const { citizenDetail } = state;
+    },
+    addNew: (state) => {
+      state.citizenDetail = { ...new CitizenDetail() };
+    },
     onError: (state, action: PayloadAction<any>) => {
       state.isLoading = false;
       state.error = action.payload;
@@ -58,11 +67,13 @@ const {
   loadCitizensSuccess,
   loadCitizenDetail,
   loadCitizenDetailSuccess,
+  addNew,
+  resetForm,
 } = citizenSlice.actions;
 
 // ASYNC ACTION
 export const fetchCitizens = (): AppThunk => (dispatch) => {
-  dispatch(loadCitizens);
+  dispatch(loadCitizens());
 
   clientApiRequest()
     .get("/clients")
@@ -77,16 +88,24 @@ export const fetchCitizens = (): AppThunk => (dispatch) => {
 export const fetchCitizenDetail = (citizenId: number): AppThunk => (
   dispatch
 ) => {
-  dispatch(loadCitizenDetail);
+  dispatch(loadCitizenDetail());
 
   clientApiRequest()
-    .get(`/clients/${citizenId}`)
+    .get(`/clientsDetail/${citizenId}`)
     .then((response: AxiosResponse<CitizenDetail>) => {
       dispatch(loadCitizenDetailSuccess(response.data));
     })
     .catch((err: any) => {
       dispatch(onError(err));
     });
+};
+
+export const addNewCitizen = (): AppThunk => (dispatch) => {
+  dispatch(addNew());
+};
+
+export const resetCitizenForm = (): AppThunk => (dispatch) => {
+  dispatch(resetForm());
 };
 
 // SELECTOR

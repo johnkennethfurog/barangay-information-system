@@ -29,10 +29,24 @@ const useStyles = makeStyles((theme: Theme) =>
     },
     date: {
       fontSize: 12,
-      marginTop: 15,
     },
     complain: {
       fontSize: 14,
+    },
+    peopleGrid: {
+      [theme.breakpoints.down("sm")]: {
+        textAlign: "center",
+      },
+    },
+    subjectGrid: {
+      [theme.breakpoints.down("sm")]: {
+        textAlign: "center",
+        marginTop: 20,
+        marginBottom: 20,
+      },
+      [theme.breakpoints.up("md")]: {
+        textAlign: "end",
+      },
     },
   })
 );
@@ -50,7 +64,7 @@ const BlotterItem = (props: BlotterItemProps) => {
   return (
     <div className={style.container}>
       <Grid container>
-        <Grid item xs={12} sm={12} md={6}>
+        <Grid className={style.peopleGrid} item xs={12} sm={12} md={6}>
           <Typography variant="subtitle2">{complainant.join(",")}</Typography>
           <Typography variant="caption">Complainant/s</Typography>
           <Typography
@@ -61,10 +75,10 @@ const BlotterItem = (props: BlotterItemProps) => {
           </Typography>
           <Typography variant="subtitle2">{respondent.join(",")}</Typography>
           <Typography variant="caption" gutterBottom>
-            Respondednt/s
+            Respondent/s
           </Typography>
         </Grid>
-        <Grid style={{ textAlign: "end" }} item xs={12} sm={12} md={6}>
+        <Grid className={style.subjectGrid} item xs={12} sm={12} md={6}>
           <Typography className={style.date} color="textSecondary">
             {moment(date).format("MMMMM DD,YYYY")}
           </Typography>
@@ -73,7 +87,7 @@ const BlotterItem = (props: BlotterItemProps) => {
           </Typography>
           <Typography variant="subtitle2">For: {subject}</Typography>
         </Grid>
-        <Grid item sm={12}>
+        <Grid item xs={12} sm={12}>
           <Typography style={{ textAlign: "center" }} variant="subtitle1">
             COMPLAIN
           </Typography>
